@@ -35,12 +35,11 @@ public class ArrayDeque<T> {
         }
         nextFirst = 0;
         nextLast = size + 1;
-//        System.arraycopy(array, 0, newArray, 0, array.length);
         array = newArray;
         length = newLength;
     }
 
-    public int adjustIndex(int i) {
+    private int adjustIndex(int i) {
         while (i < 0) {
             i += length;
         }
