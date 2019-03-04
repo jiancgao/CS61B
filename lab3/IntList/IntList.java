@@ -226,13 +226,27 @@ public class IntList {
         return out.toString();
     }
 
+    /**
+     * Returns the reverse of the given IntList.
+     * This method is destructive. If given null
+     * as an input, returns null.
+     */
     public static IntList reverse(IntList A) {
-        IntList newList = null;
-        while (A != null) {
-            newList = new IntList(A.first, newList);
-            A = A.rest;
-        }
-        return newList;
+//        IntList newList = null;
+//        while (A != null) {
+//            newList = new IntList(A.first, newList);
+//            A = A.rest;
+//        }
+//        return newList;
+//        if (A == null) {
+//            return null;
+//        }
+//        A = catenate(reverse(A.rest), new IntList(A.first, null));
+//        return A;
+        if (A == null) return null;
+        IntList p = A.rest;
+        A.rest = null;
+        return catenate(reverse(p), A);
     }
 }
 
