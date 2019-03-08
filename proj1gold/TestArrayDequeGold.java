@@ -33,7 +33,7 @@ public class TestArrayDequeGold {
             } else {
                 Integer goldInt = deque_gold.removeLast();
                 Integer testInt = deque_test.removeLast();
-                s.append("removeFirst()\n");
+                s.append("removeLast()\n");
                 assertEquals(s.toString(), goldInt, testInt);
             }
         }
